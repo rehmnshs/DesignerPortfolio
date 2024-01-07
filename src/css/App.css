@@ -89,6 +89,43 @@
   font-size: 25px;
   transition: all 0.5s;
 }
+@media only screen and (max-width: 1440px) {
+  /* Your styles for screens up to 1440 pixels wide */
+  .menu {
+    position: fixed;
+    top: 10.5%;
+    left: 85.5%;
+    height: 100px;
+    width: 100px;
+    background: transparent;
+    border: grey 1px solid;
+    z-index: 200;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 25px;
+    transition: all 0.5s;
+  }
+  .menu1 {
+    position: fixed;
+    top: 10.5%;
+    left: 85.5%;
+    height: 100px;
+    width: 100px;
+    background: transparent;
+    border: grey 1px solid;
+    z-index: 200;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 25px;
+    transition: all 0.5s;
+  }
+}
 .menu:hover {
 }
 #spart {
