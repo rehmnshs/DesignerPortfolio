@@ -3,9 +3,12 @@ import "../css/project.css";
 import img1 from "../assets/bg6.jpg";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useNavigate } from "react-router-dom";
+import { parsePath, useNavigate } from "react-router-dom";
 
-export default function Projects() {
+export default function Projects({prline,setprline,pic16Source,setpic16Source,pic15Source,setpic15Source,pic14Source,setpic14Source}) {
+  function onchangeparap(e) {
+setprline(e.target.value)
+  }
   function addInput(setImageSource) {
     var fileInput = document.createElement("input");
     fileInput.type = "file";
@@ -132,8 +135,8 @@ export default function Projects() {
       <div className="heroProject">
         <div className="projTitle">
           <h1 className="titlep">Projects</h1>
-          <textarea className="parap">
-            We will help you implement a project of any complexity
+          <textarea className="parap" onChange={onchangeparap} >
+            {prline}
           </textarea>
         </div>
         <div className="layerofproj"></div>
@@ -145,19 +148,20 @@ export default function Projects() {
       >
         Menu
       </div>
-      <div className="proj1"  onClick={addInput}>
+      <div className="proj1"  onClick={() => addInput(setpic14Source)}>
         <h1 className="proj1">Design #1</h1>
-        <img src={img1} className="img11" />
+        <img src={pic14Source[0]} className="img11" />
       </div>
-      <div className="proj2" onClick={addInput}>
+      <div className="proj2" onClick={() => addInput(setpic15Source)} >
+    
         <h1 className="proj1">Design #2</h1>
 
-        <img src={img1} />
+        <img src={pic15Source[0]} />
       </div>
-      <div className="proj3" onClick={addInput}>
+      <div className="proj3"  onClick={() => addInput(setpic16Source)}>
         <h1 className="proj1">Design #3</h1>
 
-        <img src={img1}  />
+        <img src={pic16Source[0]}  />
       </div>
     </>
   );
