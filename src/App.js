@@ -11,7 +11,6 @@ import mv6 from "../src/assets/mv6.jpg";
 import mv7 from "../src/assets/mv7.jpg";
 import { useNavigate } from "react-router-dom";
 
-
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Lenis from "@studio-freight/lenis";
@@ -24,12 +23,12 @@ export default function App() {
   gsap.registerPlugin(ScrollTrigger);
   const navigate = useNavigate();
   function scrollToTop() {
-    window.scrollTo({ top: 0, behavior: 'smooth' }); // 'smooth' for a smooth scroll, use 'auto' for instant scroll
+    window.scrollTo({ top: 0, behavior: "smooth" }); // 'smooth' for a smooth scroll, use 'auto' for instant scroll
   }
   const splitTypes = document.querySelectorAll(".para");
   useEffect(() => {
     scrollToTop();
- 
+
     gsap.from(".layer0", { scale: 0, duration: 3 });
 
     gsap.from(".layer", {
@@ -47,7 +46,7 @@ export default function App() {
           scrub: 1,
           markers: false,
         },
-        opacity:0.5,
+        opacity: 0.5,
         stagger: 0.2,
       });
       console.log("dawdaqd");
@@ -100,6 +99,28 @@ export default function App() {
     menu.classList.remove(showOverlay ? "menu1" : "menu");
     menu.classList.add(showOverlay ? "menu" : "menu1");
   }
+  function addInput(setImageSource) {
+    var fileInput = document.createElement("input");
+    fileInput.type = "file";
+    fileInput.accept = "image/";
+    fileInput.id = "dynamicFileInput";
+    fileInput.style.display = "none";
+
+    document.body.appendChild(fileInput);
+
+    fileInput.addEventListener("change", function (e) {
+      handleImageChange(e, setImageSource);
+      document.body.removeChild(fileInput);
+    });
+
+    fileInput.click();
+  }
+  const handleImageChange = (e, setImage) => {
+    const file = e.target.files[0];
+    if (file) {
+      setImage([URL.createObjectURL(file), file]);
+    }
+  };
   return (
     <>
       {showOverlay && (
@@ -108,7 +129,12 @@ export default function App() {
           <div className="overlay" id="overla">
             <div className="onepartabout">
               <div className="refsabout">
-              <div className="disappearabout refs" onClick={()=>circleColorChange("home")}>Home</div>
+                <div
+                  className="disappearabout refs"
+                  onClick={() => circleColorChange("home")}
+                >
+                  Home
+                </div>
 
                 <div
                   className="disappearabout refs"
@@ -118,7 +144,12 @@ export default function App() {
                 >
                   Projects
                 </div>
-                <div className="disappearabout refs" onClick={()=>circleColorChange("contact")}>Contact</div>
+                <div
+                  className="disappearabout refs"
+                  onClick={() => circleColorChange("contact")}
+                >
+                  Contact
+                </div>
               </div>
               <div className="socialmedia">
                 <div className="disappearabout sm">Facebook</div>
@@ -131,7 +162,7 @@ export default function App() {
           </div>
         </>
       )}
-      <h1 id="title2">Selemen</h1>
+      <textarea id="title2">Selemen</textarea>
       <div id="circle"></div>
 
       <div className="menu" id="men" onClick={circleColorChange}>
@@ -146,28 +177,29 @@ export default function App() {
       <div className="layer0"></div>
 
       <div className="middleimg">
-        <img src={img} />
+        <img src={img} onClick={addInput}/>
       </div>
       <div className="paraContainer">
-        <div className="para">
+        <textarea className="para">
           Selemen® — is a company for the construction and decoration of
-          premises. We carry out projects on time, within budget 
-        </div>
+          premises. We carry out projects on time, within budget
+        </textarea>
       </div>
       <div className="layer"></div>
       <div className="twoside">
         <div className="exp">
-          <div>20+ years on the market</div>
+          <textarea>20+ years on the market</textarea>
         </div>
 
         <div className="rightsidexp">
-          <div id="qe">We guarantee the quality</div>
+          <textarea id="qe">We guarantee the quality</textarea>
         </div>
       </div>
       <div className="thirdpage">
         <div className="img1">
           <div className="innerimg1">
             <img
+              onClick={addInput}
               id="img1"
               src="https://images.unsplash.com/photo-1507292062805-f64f18a39c9c?q=80&w=2540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             />
@@ -176,14 +208,14 @@ export default function App() {
 
         <div className="img2">
           <div className="innerimg2">
-            <img id="img2" src={img2} />
+            <img id="img2" src={img2} onClick={addInput} />
           </div>
         </div>
       </div>
       <div></div>
       <div className="img3">
         <div className="innerimg3">
-          <img src={img3} />
+          <img src={img3} onClick={addInput} />
         </div>
       </div>
       <div className="designs">
@@ -196,31 +228,31 @@ export default function App() {
       </div>
       <div className="designImgs">
         <div className="leftlast">
-          <img className="imgsample8" src={mv6} />
+          <img className="imgsample8" src={mv6} onClick={addInput} />
         </div>
         <div className="leftdwnlast">
-          <img className="imgsample8" src={mv7} />
+          <img className="imgsample8" src={mv7} onClick={addInput} />
         </div>
         <div className="leftone">
-          <img className="imgsample8" src={mv3} />
+          <img className="imgsample8" src={mv3} onClick={addInput} />
         </div>
         <div className="leftdwnone">
-          <img className="imgsample8" src={mv4} />
+          <img className="imgsample8" src={mv4} onClick={addInput} />
         </div>
         <div className="middleimg1">
-          <img className="imgsample8" src={img7} />
+          <img className="imgsample8" src={img7} onClick={addInput} />
         </div>
         <div className="rightone">
-          <img className="imgsample8" src={mv6} />
+          <img className="imgsample8" src={mv6} onClick={addInput} />
         </div>
         <div className="rightdwnone">
-          <img className="imgsample8" src={mv7} />
+          <img className="imgsample8" src={mv7} onClick={addInput} />
         </div>
         <div className="rightlast">
-          <img className="imgsample8" src={mv7} />
+          <img className="imgsample8" src={mv7} onClick={addInput} />
         </div>
         <div className="rightdwnlast">
-          <img className="imgsample8" src={mv3} />
+          <img className="imgsample8" src={mv3} onClick={addInput} />
         </div>
       </div>
     </>

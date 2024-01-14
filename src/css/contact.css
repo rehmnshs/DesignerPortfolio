@@ -32,9 +32,21 @@
 .number {
   opacity: 1;
   font-size: 50px;
+  width: 40%;
+  height: 50px;
+background: transparent;
+color: white;
+overflow-y: hidden;
+border: none;
 }
 .email {
   font-size: 50px;
+  width: 40%;
+  height: 50px;
+background: transparent;
+color: white;
+overflow-y: hidden;
+border: none;
 }
 
 .line1 {
@@ -58,7 +70,7 @@
   position: absolute;
   top: 0;
   left: 100%;
-  right: 0;
+  
   width: 1px;
   height: 232px;
   background-color: rgba(128, 128, 128, 0.5);

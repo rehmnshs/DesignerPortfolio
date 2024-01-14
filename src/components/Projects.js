@@ -6,6 +6,28 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useNavigate } from "react-router-dom";
 
 export default function Projects() {
+  function addInput(setImageSource) {
+    var fileInput = document.createElement("input");
+    fileInput.type = "file";
+    fileInput.accept = "image/";
+    fileInput.id = "dynamicFileInput";
+    fileInput.style.display = "none";
+
+    document.body.appendChild(fileInput);
+
+    fileInput.addEventListener("change", function (e) {
+      handleImageChange(e, setImageSource);
+      document.body.removeChild(fileInput);
+    });
+
+    fileInput.click();
+  }
+  const handleImageChange = (e, setImage) => {
+    const file = e.target.files[0];
+    if (file) {
+      setImage([URL.createObjectURL(file), file]);
+    }
+  };
   gsap.registerPlugin(ScrollTrigger);
   const [showOverlay, setShowOverlay] = useState(false);
   const navigate = useNavigate();
@@ -110,9 +132,9 @@ export default function Projects() {
       <div className="heroProject">
         <div className="projTitle">
           <h1 className="titlep">Projects</h1>
-          <p className="parap">
+          <textarea className="parap">
             We will help you implement a project of any complexity
-          </p>
+          </textarea>
         </div>
         <div className="layerofproj"></div>
       </div>
@@ -123,19 +145,19 @@ export default function Projects() {
       >
         Menu
       </div>
-      <div className="proj1">
+      <div className="proj1"  onClick={addInput}>
         <h1 className="proj1">Design #1</h1>
         <img src={img1} className="img11" />
       </div>
-      <div className="proj2">
+      <div className="proj2" onClick={addInput}>
         <h1 className="proj1">Design #2</h1>
 
         <img src={img1} />
       </div>
-      <div className="proj3">
+      <div className="proj3" onClick={addInput}>
         <h1 className="proj1">Design #3</h1>
 
-        <img src={img1} />
+        <img src={img1}  />
       </div>
     </>
   );

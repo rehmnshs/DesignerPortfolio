@@ -191,11 +191,22 @@ position: absolute;
   background-color: RGB(38, 38, 42);
   height: 100%;
   width: 100%;
-  z-index: 8;
+  z-index: 150;
   animation: topdownOverlay 0.5s both;
   display: flex;
   height: 100px;
   width: 100%;
   font-size: 50px;
   color: white;
+}
+.parap{
+  background: transparent;
+  color: grey;
+  opacity: 0.5;
+  width: 500px;
+  height:20px;
+  border: none;
+  z-index: 10;
+  text-align: center;
+  font-family: sans-serif;
 }

@@ -80,7 +80,7 @@ export default function Contacts() {
               
               <div className="insidedivlb1">
               <div className="ph">phone</div>
-              <div className="number" >+128148312084</div>
+              <textarea className="number" >+128148312084</textarea>
               <div className="linemiddle"></div>
               </div>
             </div>
@@ -88,7 +88,7 @@ export default function Contacts() {
               <div className="line2"></div>
               <div className="insidedivlb2">
                 <div className="em">email</div>
-                <div className="email">info@selemen</div>
+                <textarea className="email">info@selemen</textarea>
               </div>
             </div>
           </div>
