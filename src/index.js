@@ -30,7 +30,11 @@ const Index = () => {
   const [exp, setexp] = useState("20+ years on the market");
   const [rightexp, setrightexp] = useState("We guarantee the quality");
   const [designTitle, setdt] = useState("");
-
+  const [d1, setd1] = useState("Design 1");
+  const [d2, setd2] = useState("Design 2");
+  const [d3, setd3] = useState("Design 3");
+  const [email, setemail] = useState("+128148312084");
+  const [number, setnumber] = useState("info@selemen");
   const [pic1Source, setpic1Source] = useState([pic1, null]);
   const [pic2Source, setpic2Source] = useState([pic2, null]);
   const [pic3Source, setpic3Source] = useState([pic3, null]);
@@ -87,6 +91,7 @@ const Index = () => {
           setpic11Source={setpic11Source}
           setpic12Source={setpic12Source}
           setpic13Source={setpic13Source}
+          number = {number} 
         />
       ),
     },
@@ -102,13 +107,20 @@ const Index = () => {
           setpic15Source={setpic15Source}
           pic16Source={pic16Source}
           setpic16Source={setpic16Source}
+          d1={d1}
+          d2={d2}
+          d3={d3}
+          setd1={setd1}
+          setd2={setd2}
+          setd3={setd3}
+          number = {number} 
         />
       ),
     },
 
     {
       path: "/contact",
-      element: <Contacts />,
+      element: <Contacts email = {email} setemail = {setemail} number = {number} setnumber= {setnumber}/>,
     },
   ]);
 

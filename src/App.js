@@ -10,6 +10,7 @@ import Lenis from "@studio-freight/lenis";
 import SplitType from "split-type";
 
 export default function App({
+  number,
   setpic1Source,
   setpic2Source,
   setpic3Source,
@@ -25,12 +26,12 @@ export default function App({
   setpic13Source,
   title,
   setTitle,
-para,
-setpara,
-exp,
-setexp,
-rightexp,
-setrightexp,
+  para,
+  setpara,
+  exp,
+  setexp,
+  rightexp,
+  setrightexp,
   pic1Source,
   pic2Source,
   pic3Source,
@@ -48,18 +49,18 @@ setrightexp,
   const [user, setuser] = useState();
   const [showOverlay, setShowOverlay] = useState(false);
 
-  function handleEditName(e){
-setTitle(e.target.value)
+  function handleEditName(e) {
+    setTitle(e.target.value);
   }
-  function handleEditpara(e){
-    setpara(e.target.value)
-      }
-      function handleEditexp(e){
-        setexp(e.target.value)
-          }
-          function handleEditrexp(e){
-            setrightexp(e.target.value)
-              }
+  function handleEditpara(e) {
+    setpara(e.target.value);
+  }
+  function handleEditexp(e) {
+    setexp(e.target.value);
+  }
+  function handleEditrexp(e) {
+    setrightexp(e.target.value);
+  }
   gsap.registerPlugin(ScrollTrigger);
   const navigate = useNavigate();
   function scrollToTop() {
@@ -192,18 +193,18 @@ setTitle(e.target.value)
                 </div>
               </div>
               <div className="socialmedia">
-                <div className="disappearabout sm">Facebook</div>
-                <div className="disappearabout sm">instagram</div>
+ 
               </div>
             </div>
             <div className="secondpartabout">
-              <div className="disappearabout">+352 661 638 639</div>
+              <div className="disappearabout">{number}</div>
             </div>
           </div>
         </>
       )}
-      <textarea id="title2"
-        onChange={handleEditName}>{title}</textarea>
+      <textarea id="title2" onChange={handleEditName}>
+        {title}
+      </textarea>
       <div id="circle"></div>
 
       <div className="menu" id="men" onClick={circleColorChange}>
@@ -222,7 +223,7 @@ setTitle(e.target.value)
       </div>
       <div className="paraContainer">
         <textarea className="para" onChange={handleEditpara}>
-         {para }
+          {para}
         </textarea>
       </div>
       <div className="layer"></div>
@@ -232,7 +233,9 @@ setTitle(e.target.value)
         </div>
 
         <div className="rightsidexp">
-          <textarea id="qe" onChange={handleEditrexp}> </textarea>
+          <textarea id="qe" onChange={handleEditrexp}>
+            {rightexp}
+          </textarea>
         </div>
       </div>
       <div className="thirdpage">

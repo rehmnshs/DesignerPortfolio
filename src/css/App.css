@@ -311,9 +311,9 @@
   font-weight: bold;
 }
 .socialmedia {
-  font-size: 30px;
+  font-size: 50px;
   display: flex;
-  gap: 20px;
+
 }
 .secondpartabout {
   height: 100vh;

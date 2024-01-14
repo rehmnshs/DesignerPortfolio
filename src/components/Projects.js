@@ -5,9 +5,34 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { parsePath, useNavigate } from "react-router-dom";
 
-export default function Projects({prline,setprline,pic16Source,setpic16Source,pic15Source,setpic15Source,pic14Source,setpic14Source}) {
+export default function Projects({
+  prline,
+  setprline,
+  pic16Source,
+  setpic16Source,
+  pic15Source,
+  setpic15Source,
+  pic14Source,
+  setpic14Source,
+  d1,
+  d2,
+  d3,
+  setd1,
+  setd2,
+  setd3,
+  number,
+}) {
   function onchangeparap(e) {
-setprline(e.target.value)
+    setprline(e.target.value);
+  }
+  function onchanged1(e) {
+    setd1(e.target.value);
+  }
+  function onchanged2(e) {
+    setd2(e.target.value);
+  }
+  function onchanged3(e) {
+    setd3(e.target.value);
   }
   function addInput(setImageSource) {
     var fileInput = document.createElement("input");
@@ -35,21 +60,20 @@ setprline(e.target.value)
   const [showOverlay, setShowOverlay] = useState(false);
   const navigate = useNavigate();
   function scrollToTop() {
-    window.scrollTo({ top: 0, behavior: 'smooth' }); 
+    window.scrollTo({ top: 0, behavior: "smooth" });
   }
-  
+
   // Call the scrollToTop function when the page loads
-  window.addEventListener('load', scrollToTop);
+  window.addEventListener("load", scrollToTop);
   useEffect(() => {
     scrollToTop();
-        gsap.from(".titlep", { duration: 1, opacity: 0, y: 100 });
+    gsap.from(".titlep", { duration: 1, opacity: 0, y: 100 });
     gsap.from(".parap", { duration: 1, opacity: 0, y: 100 });
 
     gsap.from(".layerofproj", { scale: 0, duration: 2 });
-      gsap.from(".proj1", {
+    gsap.from(".proj1", {
       scale: 0.5,
-      scrollTrigger: { trigger: ".proj1", scrub: false,     
-    },
+      scrollTrigger: { trigger: ".proj1", scrub: false },
       y: 500,
       duration: 1,
     });
@@ -83,7 +107,8 @@ setprline(e.target.value)
         }
         if (projectj === "contact") {
           navigate("/contact");
-        }    if (projectj === "projects") {
+        }
+        if (projectj === "projects") {
           navigate("/projects");
         }
       }, 500);
@@ -95,8 +120,6 @@ setprline(e.target.value)
     menu.classList.remove(showOverlay ? "menu1" : "menu");
     menu.classList.add(showOverlay ? "menu" : "menu1");
   }
- 
-  
 
   return (
     <>
@@ -106,9 +129,14 @@ setprline(e.target.value)
           <div className="overlay1" id="overla1">
             <div className="onepartabout">
               <div className="refsabout">
-                <div className="disappearabout refs" onClick={() => {
+                <div
+                  className="disappearabout refs"
+                  onClick={() => {
                     showlay1("home");
-                  }}>Home</div>
+                  }}
+                >
+                  Home
+                </div>
                 <div
                   className="disappearabout refs"
                   onClick={() => {
@@ -117,17 +145,19 @@ setprline(e.target.value)
                 >
                   Projects
                 </div>
-                <div className="disappearabout refs"  onClick={() => {
+                <div
+                  className="disappearabout refs"
+                  onClick={() => {
                     showlay1("contact");
-                  }}>Contact</div>
+                  }}
+                >
+                  Contact
+                </div>
               </div>
-              <div className="socialmedia">
-                <div className="disappearabout sm">Facebook</div>
-                <div className="disappearabout sm">instagram</div>
-              </div>
+              <div className="socialmedia"><div>Host it!</div></div>
             </div>
             <div className="secondpartabout">
-              <div className="disappearabout">+352 661 638 639</div>
+              <div className="disappearabout">{number}</div>
             </div>
           </div>
         </>
@@ -135,7 +165,7 @@ setprline(e.target.value)
       <div className="heroProject">
         <div className="projTitle">
           <h1 className="titlep">Projects</h1>
-          <textarea className="parap" onChange={onchangeparap} >
+          <textarea className="parap" onChange={onchangeparap}>
             {prline}
           </textarea>
         </div>
@@ -148,20 +178,40 @@ setprline(e.target.value)
       >
         Menu
       </div>
-      <div className="proj1"  onClick={() => addInput(setpic14Source)}>
-        <h1 className="proj1">Design #1</h1>
+      <div className="proj1" onClick={() => addInput(setpic14Source)}>
+        <h1 className="proj1">
+          <textarea className="titled" onChange={onchanged1}>
+            {d1}
+          </textarea>
+        </h1>
         <img src={pic14Source[0]} className="img11" />
       </div>
-      <div className="proj2" onClick={() => addInput(setpic15Source)} >
-    
-        <h1 className="proj1">Design #2</h1>
+      <div className="proj2" onClick={() => addInput(setpic15Source)}>
+        <h1 className="proj1">
+          <textarea className="titled" onChange={onchanged2}>
+            {d2}
+          </textarea>
+        </h1>
 
         <img src={pic15Source[0]} />
       </div>
-      <div className="proj3"  onClick={() => addInput(setpic16Source)}>
-        <h1 className="proj1">Design #3</h1>
+      <div className="proj3" onClick={() => addInput(setpic16Source)}>
+        <h1 className="proj1">
+          <textarea className="titled" onChange={onchanged3}>
+            {d3}
+          </textarea>
+        </h1>
 
-        <img src={pic16Source[0]}  />
+        <img src={pic16Source[0]} />
+      </div>
+      <div className="proj3" onClick={() => addInput(setpic16Source)}>
+        <h1 className="proj1">
+          <textarea className="titled" onChange={onchanged3}>
+            {d3}
+          </textarea>
+        </h1>
+
+        <img src={pic16Source[0]} />
       </div>
     </>
   );
