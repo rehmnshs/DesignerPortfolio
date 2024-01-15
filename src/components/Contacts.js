@@ -4,7 +4,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useNavigate } from "react-router-dom";
 
-export default function Contacts() {
+export default function Contacts({ setemail, email, number, setnumber }) {
   const [showOverlay, setShowOverlay] = useState(false);
   const navigate = useNavigate();
   useEffect(() => {
@@ -59,12 +59,11 @@ export default function Contacts() {
                 <div className="disappearabout refs">Contact</div>
               </div>
               <div className="socialmedia">
-                <div className="disappearabout sm">Facebook</div>
-                <div className="disappearabout sm">instagram</div>
+
               </div>
             </div>
             <div className="secondpartabout">
-              <div className="disappearabout">+352 661 638 639</div>
+              <div className="disappearabout">{number}</div>
             </div>
           </div>
         </>
@@ -80,7 +79,7 @@ export default function Contacts() {
               
               <div className="insidedivlb1">
               <div className="ph">phone</div>
-              <div className="number" >+128148312084</div>
+              <div className="number" >{number}</div>
               <div className="linemiddle"></div>
               </div>
             </div>
@@ -88,7 +87,7 @@ export default function Contacts() {
               <div className="line2"></div>
               <div className="insidedivlb2">
                 <div className="em">email</div>
-                <div className="email">info@selemen</div>
+                <div className="email">{email}</div>
               </div>
             </div>
           </div>

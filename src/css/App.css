@@ -80,7 +80,7 @@
   width: 100px;
   background: transparent;
   border: grey 1px solid;
-  z-index: 200;
+  z-index: 1000;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -88,43 +88,6 @@
   font-family: "Times New Roman", Times, serif;
   font-size: 25px;
   transition: all 0.5s;
-}
-@media only screen and (max-width: 1440px) {
-  /* Your styles for screens up to 1440 pixels wide */
-  .menu {
-    position: fixed;
-    top: 10.5%;
-    left: 85.5%;
-    height: 100px;
-    width: 100px;
-    background: transparent;
-    border: grey 1px solid;
-    z-index: 200;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: "Times New Roman", Times, serif;
-    font-size: 25px;
-    transition: all 0.5s;
-  }
-  .menu1 {
-    position: fixed;
-    top: 10.5%;
-    left: 85.5%;
-    height: 100px;
-    width: 100px;
-    background: transparent;
-    border: grey 1px solid;
-    z-index: 200;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: "Times New Roman", Times, serif;
-    font-size: 25px;
-    transition: all 0.5s;
-  }
 }
 .menu:hover {
 }
@@ -167,7 +130,7 @@
   background-color: RGB(38,38,42);
   height: 100%;
   width: 100%;
-  z-index: 8;
+  z-index: 150;
   animation: topdownOverlay 0.5s both;
   display: flex;
   height: 100px;
@@ -184,7 +147,7 @@
   width: 100px;
   background: transparent;
   border: grey 1px solid;
-  z-index: 100;
+  z-index: 1000;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -275,7 +238,24 @@
   z-index: 7;
   color: RGB(169, 171, 181);
   animation: height 1s 1S both;
+  background-color: transparent;
+  border: none;
+  font-size: 20vw;
+  text-align: center;
+  height: 400px;
+  font-family: sans-serif;
+  overflow-y: hidden;
 }
+.textTitle2{
+  background-color: transparent;
+  color: grey;
+  font-size: 10vw;
+  border: none;
+  font-family: 'Times New Roman', Times, serif;
+
+  
+}
+.
 @keyframes height {
   0% {
     opacity: 0;
@@ -331,9 +311,9 @@
   font-weight: bold;
 }
 .socialmedia {
-  font-size: 30px;
+  font-size: 50px;
   display: flex;
-  gap: 20px;
+
 }
 .secondpartabout {
   height: 100vh;
@@ -392,6 +372,15 @@
   width: 60%;
   text-align: center;
   font-size: 120px;
+
+
+}
+.para{
+  background: transparent;
+  color: white;
+  overflow-y: hidden;
+  border: none;
+  font-family: sans-serif;
 }
 .twoside {
   height: 100vh;
@@ -409,8 +398,12 @@
 .exp {
   display: flex;
   justify-content: center;
-  font-size: 110px;
+
   font-weight: lighter;
+  color: white;
+  border: none;
+  font-family: sans-serif;
+  font-size: 100px;
   
 }
 .rightsidexp {
@@ -420,10 +413,9 @@
   top: 50%;
   font-size: 50px;
   left: -10%;
-
-font-weight: lighter;
+height: 50px;
+  font-weight: lighter;
 }
-
 .thirdpage {
   height: 100vh;
   width: 100%;
@@ -433,7 +425,7 @@ font-weight: lighter;
   height: 100%;
   width: 50%;
 }
-.img1::after{
+/*.img1::after{
   content: 'Full range of design services';
   width: 200px;
   height: 100px;
@@ -443,13 +435,13 @@ font-weight: lighter;
   top: 3%;
   font-size: 17px;
   opacity: 0.6
-}
+}*/
 .img2 {
   height: 100%;
   width: 50%;
 
 }
-.img2::after{
+/*.img2::after{
   content: 'Comprehensive construction services';
   width: 300px;
   height: 100px;
@@ -461,12 +453,14 @@ font-weight: lighter;
   font-size: 17px;
   opacity: 0.6;
   
-}
+}*/
 .innerimg1 {
+  position: relative;
   width: 500px;
   background: #000;
   z-index: 6;
 }
+
 .innerimg1 > img {
   width: 500px;
   height: auto;
@@ -537,7 +531,7 @@ font-weight: lighter;
   position: relative;
   margin-top: 10%;
 }
-.img3::after{
+/*.img3::after{
   content: 'We perform the functions of a general contract';
   display: block;
   width: 400px;
@@ -549,7 +543,7 @@ font-weight: lighter;
   opacity: 0.6;
   white-space: wrap;
   
-}
+}*/
 .innerimg3 {
   display: flex;
   justify-content: center;
@@ -718,4 +712,19 @@ top: 20%;
   text-align: center;
   font-size: 120px;
   opacity: 1;
+}
+#qe{
+  background-color: transparent;
+color: white;
+border: none;
+font-family: sans-serif;
+font-size: 40px;
+font-weight: lighter;
+}
+.exp > textarea{
+  background-color: transparent;
+  color: white;
+  border: none;
+  font-family: sans-serif;
+  font-size: 40px;
 }

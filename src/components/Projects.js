@@ -5,26 +5,43 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useNavigate } from "react-router-dom";
 
-export default function Projects() {
+export default function Projects({
+  prline,
+  setprline,
+  pic16Source,
+  setpic16Source,
+  pic15Source,
+  setpic15Source,
+  pic14Source,
+  setpic14Source,
+  pic17Source,
+  d1,
+  d2,
+  d3,
+  d4,
+  setd1,
+  setd2,
+  setd3,
+  number,
+}) {
   gsap.registerPlugin(ScrollTrigger);
   const [showOverlay, setShowOverlay] = useState(false);
   const navigate = useNavigate();
   function scrollToTop() {
-    window.scrollTo({ top: 0, behavior: 'smooth' }); 
+    window.scrollTo({ top: 0, behavior: "smooth" });
   }
-  
+
   // Call the scrollToTop function when the page loads
-  window.addEventListener('load', scrollToTop);
+  window.addEventListener("load", scrollToTop);
   useEffect(() => {
     scrollToTop();
-        gsap.from(".titlep", { duration: 1, opacity: 0, y: 100 });
+    gsap.from(".titlep", { duration: 1, opacity: 0, y: 100 });
     gsap.from(".parap", { duration: 1, opacity: 0, y: 100 });
 
     gsap.from(".layerofproj", { scale: 0, duration: 2 });
-      gsap.from(".proj1", {
+    gsap.from(".proj1", {
       scale: 0.5,
-      scrollTrigger: { trigger: ".proj1", scrub: false,     
-    },
+      scrollTrigger: { trigger: ".proj1", scrub: false },
       y: 500,
       duration: 1,
     });
@@ -58,7 +75,8 @@ export default function Projects() {
         }
         if (projectj === "contact") {
           navigate("/contact");
-        }    if (projectj === "projects") {
+        }
+        if (projectj === "projects") {
           navigate("/projects");
         }
       }, 500);
@@ -70,8 +88,6 @@ export default function Projects() {
     menu.classList.remove(showOverlay ? "menu1" : "menu");
     menu.classList.add(showOverlay ? "menu" : "menu1");
   }
- 
-  
 
   return (
     <>
@@ -81,9 +97,14 @@ export default function Projects() {
           <div className="overlay1" id="overla1">
             <div className="onepartabout">
               <div className="refsabout">
-                <div className="disappearabout refs" onClick={() => {
+                <div
+                  className="disappearabout refs"
+                  onClick={() => {
                     showlay1("home");
-                  }}>Home</div>
+                  }}
+                >
+                  Home
+                </div>
                 <div
                   className="disappearabout refs"
                   onClick={() => {
@@ -92,17 +113,21 @@ export default function Projects() {
                 >
                   Projects
                 </div>
-                <div className="disappearabout refs"  onClick={() => {
+                <div
+                  className="disappearabout refs"
+                  onClick={() => {
                     showlay1("contact");
-                  }}>Contact</div>
+                  }}
+                >
+                  Contact
+                </div>
               </div>
               <div className="socialmedia">
-                <div className="disappearabout sm">Facebook</div>
-                <div className="disappearabout sm">instagram</div>
+        
               </div>
             </div>
             <div className="secondpartabout">
-              <div className="disappearabout">+352 661 638 639</div>
+              <div className="disappearabout">{number}</div>
             </div>
           </div>
         </>
@@ -124,18 +149,27 @@ export default function Projects() {
         Menu
       </div>
       <div className="proj1">
-        <h1 className="proj1">Design #1</h1>
-        <img src={img1} className="img11" />
+        <h1 className="proj1">{d1}</h1>
+        <img src={pic14Source[0]} className="img11" />
       </div>
       <div className="proj2">
-        <h1 className="proj1">Design #2</h1>
+        <h1 className="proj1">{d2}</h1>
 
-        <img src={img1} />
+        <img src={pic15Source[0]} />
       </div>
       <div className="proj3">
-        <h1 className="proj1">Design #3</h1>
+        <h1 className="proj1">{d3}</h1>
 
-        <img src={img1} />
+        <img src={pic16Source[0]} />
+      </div>
+      <div className="proj3" >
+        <h1 className="proj1">
+          <h1 className="titled" >
+            {d4}
+          </h1>
+        </h1>
+
+        <img src={pic17Source[0]} />
       </div>
     </>
   );
