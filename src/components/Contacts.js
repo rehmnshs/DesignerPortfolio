@@ -23,26 +23,40 @@ export default function Contacts({ setemail, email, number, setnumber }) {
     });
   }, []);
 
-  function circleColorChange(project) {
+  function circleColorChange(projectj) {
     if (showOverlay) {
       gsap.to(".disappearabout", { opacity: 0, duration: 0.3 });
-      var menuu = document.getElementById("overla");
+      gsap.to( ".socialmedia", { opacity: 0, duration: 0 });
 
+      var menuu = document.getElementById("overla1");
+
+      menuu.classList.toggle("closing-animation");
+
+      let menu = document.getElementById("men");
+
+      menu.classList.remove(showOverlay ? "menu1" : "menu");
+      menu.classList.add(showOverlay ? "menu" : "menu1");
       return setTimeout(function () {
-        setShowOverlay(!showOverlay);
-        if (project === "projects") {
-          navigate("/projects");
+        setShowOverlay(false);
+        if (projectj === "home") {
+          navigate("/");
         }
-        if (project === "contact") {
+        if (projectj === "contact") {
           navigate("/contact");
         }
-        if (project === "home") {
-          navigate("/");
+        if (projectj === "projects") {
+          navigate("/projects");
         }
       }, 500);
     }
     gsap.to(".disappearabout", { opacity: 0, duration: 0.3, delay: 1 });
+    gsap.to( ".socialmedia", { opacity: 0, duration: 0.01,delay:1 });
+
     setShowOverlay(!showOverlay);
+    let menu = document.getElementById("men");
+
+    menu.classList.remove(showOverlay ? "menu1" : "menu");
+    menu.classList.add(showOverlay ? "menu" : "menu1");
   }
   return (
     <>
@@ -72,7 +86,7 @@ export default function Contacts({ setemail, email, number, setnumber }) {
                 <div className="disappearabout refs">Contact</div>
               </div>
               <div className="socialmedia">
-
+Host it
               </div>
             </div>
             <div className="secondpartabout">

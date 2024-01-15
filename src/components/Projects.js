@@ -8,6 +8,8 @@ import { parsePath, useNavigate } from "react-router-dom";
 export default function Projects({
   prline,
   setprline,
+  pic17Source,
+  setpic17Source,
   pic16Source,
   setpic16Source,
   pic15Source,
@@ -17,6 +19,7 @@ export default function Projects({
   d1,
   d2,
   d3,
+  d4,
   setd1,
   setd2,
   setd3,
@@ -92,6 +95,8 @@ export default function Projects({
   function showlay1(projectj) {
     if (showOverlay) {
       gsap.to(".disappearabout", { opacity: 0, duration: 0.3 });
+      gsap.to( ".socialmedia", { opacity: 0, duration: 0 });
+
       var menuu = document.getElementById("overla1");
 
       menuu.classList.toggle("closing-animation");
@@ -114,6 +119,8 @@ export default function Projects({
       }, 500);
     }
     gsap.to(".disappearabout", { opacity: 0, duration: 0.3, delay: 1 });
+    gsap.to( ".socialmedia", { opacity: 0, duration: 0.01,delay:1 });
+
     setShowOverlay(!showOverlay);
     let menu = document.getElementById("men");
 
@@ -153,8 +160,9 @@ export default function Projects({
                 >
                   Contact
                 </div>
+                
               </div>
-              <div className="socialmedia"><div>Host it!</div></div>
+              <div className="socialmedia">Host it</div>
             </div>
             <div className="secondpartabout">
               <div className="disappearabout">{number}</div>
@@ -204,14 +212,14 @@ export default function Projects({
 
         <img src={pic16Source[0]} />
       </div>
-      <div className="proj3" onClick={() => addInput(setpic16Source)}>
+      <div className="proj3" onClick={() => addInput(setpic17Source)}>
         <h1 className="proj1">
           <textarea className="titled" onChange={onchanged3}>
-            {d3}
+            {d4}
           </textarea>
         </h1>
 
-        <img src={pic16Source[0]} />
+        <img src={pic17Source[0]} />
       </div>
     </>
   );

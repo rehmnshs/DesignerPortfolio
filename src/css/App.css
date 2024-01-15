@@ -313,7 +313,15 @@
 .socialmedia {
   font-size: 50px;
   display: flex;
+  margin-left: -60px;
+  cursor: pointer;
+  transition: all 0.5s;
+  font-weight: bold;
 
+}
+.socialmedia:hover{
+  transform: translateX(20px);
+  color: yellow;
 }
 .secondpartabout {
   height: 100vh;
@@ -330,6 +338,7 @@
 .disappearabout.refs {
   position: relative;
   transition: transform 0.3s;
+  cursor: pointer;
 }
 .disappearabout.refs:hover {
   transform: translateX(20px);
@@ -420,35 +429,13 @@
   height: 100%;
   width: 50%;
 }
-.img1::after{
-  content: 'Full range of design services';
-  width: 200px;
-  height: 100px;
-  position: relative;
-  display: block;
-  left: 10%;
-  top: 3%;
-  font-size: 17px;
-  opacity: 0.6
-}
+
 .img2 {
   height: 100%;
   width: 50%;
 
 }
-.img2::after{
-  content: 'Comprehensive construction services';
-  width: 300px;
-  height: 100px;
-  position: relative;
-  display: block;
 
- 
-  top:15%;
-  font-size: 17px;
-  opacity: 0.6;
-  
-}
 .innerimg1 {
   width: 500px;
   background: #000;
@@ -524,19 +511,7 @@
   position: relative;
   margin-top: 10%;
 }
-.img3::after{
-  content: 'We perform the functions of a general contract';
-  display: block;
-  width: 400px;
-  height: 100px;
-  position: relative;
-  top: 5%;
-  left: 27%;
-  font-size: 17px;
-  opacity: 0.6;
-  white-space: wrap;
-  
-}
+
 .innerimg3 {
   display: flex;
   justify-content: center;

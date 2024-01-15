@@ -24,7 +24,7 @@ const Index = () => {
   );
   const [username, setusername] = useState("");
   const [para, setpara] = useState(
-    "Selemen® — is a company for the construction and decoration of premises. We carry out projects on time, within budget"
+    "Selemen® — is a company for the construction and decoration of premises. We carry out projects on time"
   );
   const [title, setTitle] = useState("Selemen");
   const [exp, setexp] = useState("20+ years on the market");
@@ -33,8 +33,10 @@ const Index = () => {
   const [d1, setd1] = useState("Design 1");
   const [d2, setd2] = useState("Design 2");
   const [d3, setd3] = useState("Design 3");
-  const [email, setemail] = useState("+128148312084");
-  const [number, setnumber] = useState("info@selemen");
+  const [d4, setd4] = useState("Design 4");
+
+  const [email, setemail] = useState("info@selemen");
+  const [number, setnumber] = useState("+128148312084");
   const [pic1Source, setpic1Source] = useState([pic1, null]);
   const [pic2Source, setpic2Source] = useState([pic2, null]);
   const [pic3Source, setpic3Source] = useState([pic3, null]);
@@ -51,6 +53,7 @@ const Index = () => {
   const [pic14Source, setpic14Source] = useState([pic12, null]);
   const [pic15Source, setpic15Source] = useState([pic12, null]);
   const [pic16Source, setpic16Source] = useState([pic12, null]);
+  const [pic17Source, setpic17Source] = useState([pic12, null]);
 
   const router = createBrowserRouter([
     {
@@ -107,9 +110,12 @@ const Index = () => {
           setpic15Source={setpic15Source}
           pic16Source={pic16Source}
           setpic16Source={setpic16Source}
+          pic17Source={pic17Source}
+          setpic17Source={setpic17Source}
           d1={d1}
           d2={d2}
           d3={d3}
+          d4={d4}
           setd1={setd1}
           setd2={setd2}
           setd3={setd3}

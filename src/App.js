@@ -109,6 +109,8 @@ export default function App({
   function circleColorChange(project) {
     if (showOverlay) {
       gsap.to(".disappearabout", { opacity: 0, duration: 0.3 });
+      gsap.to(".socialmedia", { opacity: 0, duration: 0.00 });
+
       var menuu = document.getElementById("overla");
 
       menuu.classList.toggle("closing-animation");
@@ -131,6 +133,8 @@ export default function App({
       }, 500);
     }
     gsap.to(".disappearabout", { opacity: 0, duration: 0.3, delay: 1 });
+    gsap.to(".socialmedia", { opacity: 0, duration: 0.01, delay: 1 });
+
     setShowOverlay(!showOverlay);
     let circle = document.getElementById("circle");
     let menu = document.getElementById("men");
@@ -192,9 +196,7 @@ export default function App({
                   Contact
                 </div>
               </div>
-              <div className="socialmedia">
- 
-              </div>
+              <div className="socialmedia">Host it</div>
             </div>
             <div className="secondpartabout">
               <div className="disappearabout">{number}</div>
