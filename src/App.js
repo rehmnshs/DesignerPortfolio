@@ -49,7 +49,6 @@ export default function App({
   const [user, setuser] = useState();
   const [showOverlay, setShowOverlay] = useState(false);
 
-
   gsap.registerPlugin(ScrollTrigger);
   const navigate = useNavigate();
   function scrollToTop() {
@@ -130,9 +129,6 @@ export default function App({
     menu.classList.add(showOverlay ? "menu" : "menu1");
   }
 
-
-  
-
   return (
     <>
       {showOverlay && (
@@ -163,9 +159,7 @@ export default function App({
                   Contact
                 </div>
               </div>
-              <div className="socialmedia">
- 
-              </div>
+              <div className="socialmedia"></div>
             </div>
             <div className="secondpartabout">
               <div className="disappearabout">{number}</div>
@@ -173,9 +167,7 @@ export default function App({
           </div>
         </>
       )}
-      <h1 id="title2" >
-        {title}
-      </h1>
+      <h1 id="title2">{title}</h1>
       <div id="circle"></div>
 
       <div className="menu" id="men" onClick={circleColorChange}>
@@ -190,122 +182,54 @@ export default function App({
       <div className="layer0"></div>
 
       <div className="middleimg">
-        <img src={pic1Source[0]}  />
+        <img src={pic1Source[0]} />
       </div>
       <div className="paraContainer">
-        <h1 className="para">
-          {para}
-        </h1>
+        <p className="para">{para}</p>
       </div>
       <div className="layer"></div>
       <div className="twoside">
         <div className="exp">
-          <div >{exp}</div>
+          <div>{exp}</div>
         </div>
 
         <div className="rightsidexp">
-          <div id="qe" >
-            {rightexp}
-          </div>
+          <div id="qe">{rightexp}</div>
         </div>
       </div>
       <div className="thirdpage">
         <div className="img1">
           <div className="innerimg1">
-            <img
-              id="img1"
-              src={pic2Source[0]}
-              onClick={() => {
-              }}
-            />
+            <img id="img1" src={pic2Source[0]} onClick={() => {}} />
+            <div className="txtimg">ladsas</div>
           </div>{" "}
         </div>
 
         <div className="img2">
           <div className="innerimg2">
-            <img
-              id="img2"
-              src={pic3Source[0]}
-        
-            />
-          </div>
+            <img id="img2" src={pic3Source[0]} />
+            <div className="txtimg">ladsas</div>
 
+
+          </div>
+          <div>ladsas</div>
         </div>
       </div>
-      <div></div>
+  
       <div className="img3">
         <div className="innerimg3">
-          <img
-            src={pic4Source[0]}
-         
-          />
-        </div>
+          <img  className="img3inner" src={pic4Source[0]} />
+          <div className="txtimg">ladsas</div>
 
-      </div>
-      <div className="designs">
-        <div className="dtitle">
-          {" "}
-          <h1>Wide range of designs</h1>
-          <p>We will help you implement a project of any complexity</p>
-          <div className="imgsamplec"></div>
         </div>
       </div>
+     
       <div className="designImgs">
-        <div className="leftlast">
-          <img
-            className="imgsample8"
-            src={pic5Source[0]}
-          />
-        </div>
-        <div className="leftdwnlast">
-          <img
-            className="imgsample8"
-            src={pic8Source[0]}
-          />
-        </div>
-        <div className="leftone">
-          <img
-            className="imgsample8"
-            src={pic10Source[0]}
-          />
-        </div>
-        <div className="leftdwnone">
-          <img
-            className="imgsample8"
-            src={pic7Source[0]}
-          />
-        </div>
-        <div className="middleimg1">
-          <img
-            className="imgsample8"
-            src={pic6Source[0]}
-          />
-        </div>
-        <div className="rightone">
-          <img
-            className="imgsample8"
-            src={pic9Source[0]}
-          />
-        </div>
-        <div className="rightdwnone">
-          <img
-            className="imgsample8"
-            src={pic13Source[0]}
-          />
-        </div>
-        <div className="rightlast">
-          <img
-            className="imgsample8"
-            src={pic11Source[0]}
-          />
-        </div>
-        <div className="rightdwnlast">
-          <img
-            className="imgsample8"
-            src={pic12Source[0]}
-          />
-        </div>
+        <h1 className="visproj " onClick={()=>{navigate('/projects')}}>
+          Visit Our Projects 
+        </h1>
       </div>
     </>
   );
+
 }

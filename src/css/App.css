@@ -404,6 +404,8 @@
   border: none;
   font-family: sans-serif;
   font-size: 100px;
+  max-height: 60%;
+  overflow: hidden;
   
 }
 .rightsidexp {
@@ -415,6 +417,7 @@
   left: -10%;
 height: 50px;
   font-weight: lighter;
+  overflow: hidden;
 }
 .thirdpage {
   height: 100vh;
@@ -439,6 +442,9 @@ height: 50px;
 .img2 {
   height: 100%;
   width: 50%;
+display: flex;
+flex-direction: column;
+
 
 }
 /*.img2::after{
@@ -456,13 +462,16 @@ height: 50px;
 }*/
 .innerimg1 {
   position: relative;
-  width: 500px;
-  background: #000;
+  width: 50%;
+  background-color: transparent;
+
   z-index: 6;
 }
-
+.txtimg{
+  opacity: 0.5;
+}
 .innerimg1 > img {
-  width: 500px;
+  width: 100%;
   height: auto;
 }
 .innerimg2 {
@@ -474,7 +483,7 @@ height: 50px;
   top: 10%;
 }
 .innerimg2 > img {
-  height: 100%;
+  height: auto;
   width: 110%;
 }
 .layer {
@@ -526,10 +535,11 @@ height: 50px;
   top: 50%;
 }
 .img3 {
-  height: 80vh;
+  height: 100vh;
   width: 50%;
   position: relative;
-  margin-top: 10%;
+
+
 }
 /*.img3::after{
   content: 'We perform the functions of a general contract';
@@ -545,11 +555,19 @@ height: 50px;
   
 }*/
 .innerimg3 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
+
+left: 30%;
+justify-content: center;
+  position: relative;
+  top: 30%;
+ overflow: hidden;
+ 
+
+}
+.asd{
+  
+}
 .end {
   height: 100vh;
 }
@@ -607,91 +625,79 @@ top: 20%;
 .designImgs {
   height: 100vh;
   width: 100vw;
-  position: relative;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  
+
+
+}
+.imgsample8{
+height: auto;
+}
+.left30{
+
+
+}
+.leftpar1{
+
+}
+.lastpar2{
+
+}
+.middilepart40{
+
+}
+.right30{
+
+}
+.right1{
+
+
+}
+.right2{
+ 
+
+  
+}
+#ir2{
+  height: 200px;
 }
 .middleimg1 {
-  height: 700px;
-  width: 560px;
-  background: grey;
+
 }
 .leftone {
-  width: 300px;
-  height: 500px;
-  position: absolute;
-  left: 18%;
-  top: 5%;
-  background: #000;
+
 }
 .leftdwnone {
-  width: 300px;
-  height: 200px;
-  position: absolute;
-  background: #000;
-  left: 18%;
-  top: 62%;
+
 }
 .leftlast{
-  height: 300px;
-  width: 300px;
-  position: absolute;
-  background: grey;
-  left: 0;
-  top: 0;
+
 }
 .rightlast{
-  height: 300px;
-  width: 300px;
-  position: absolute;
-  background: grey;
-  left: 85%;
-  top: 0;
-}
-.leftdwnlast{
-  height: 600px;
-  width: 300px;
-  position: absolute;
 
 }
 .leftdwnlast{
-  height: 400px;
-  width: 300px;
-  position: absolute;
-  background-color: grey;
-  left: 0%;
-  top: 35%;
+
+
+}
+.leftdwnlast{
+
   
 }
 .rightone {
-  width: 300px;
-  height: 500px;
-  position: absolute;
-  right: 18%;
-  top: 5%;
-  background: #000;
+
 }
 .rightdwnone {
-  width: 300px;
-  height: 200px;
-  position: absolute;
-  background: #000;
-  right: 18%;
-  top: 62%;
+
 }
 .rightdwnlast{
-  height: 400px;
-  width: 300px;
-  position: absolute;
-  background-color: grey;
-  left: 85%;
-  top: 35%;
+
   
 }
 .imgsample8{
-  height: 100%;
-  width: 100%;
+
 
 }
 .linecont{
@@ -727,4 +733,21 @@ font-weight: lighter;
   border: none;
   font-family: sans-serif;
   font-size: 40px;
+}
+.visproj{
+  position: relative;
+  display: flex;
+  cursor: pointer;
+}
+.visproj::after{
+content: '';
+position: absolute;
+top: 90%;
+width: 0px;
+height: 1px;
+background-color: white;
+transition: all 1s;
+}
+.visproj:hover::after{
+width: 260px;
 }
