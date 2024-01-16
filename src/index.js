@@ -12,6 +12,9 @@ import pic4 from "../src/assets/pic4.jpg";
 import pic12 from "../src/assets/bg6.jpg";
 
 const Index = () => {
+
+
+  // CONTENTS
   const [prline, setprline] = useState(
     "We will help you implement a project of any complexity"
   );
@@ -42,7 +45,7 @@ const Index = () => {
   const [pic17Source, setpic17Source] = useState([pic12, null]);
   const [pic18Source, setpic18Source] = useState([pic12, null]);
   const [pic19Source, setpic19Source] = useState([pic12, null]);
-
+//CONTENTS
   const router = createBrowserRouter([
     {
       path: "/",
@@ -83,22 +86,21 @@ const Index = () => {
           pic17Source={pic17Source}
           setpic17Source={setpic17Source}
           pic18Source={pic18Source}
-          setpic18Source ={setpic18Source}
+          setpic18Source={setpic18Source}
           pic19Source={pic19Source}
-          setpic19Source ={setpic19Source}
+          setpic19Source={setpic19Source}
           d1={d1}
           d2={d2}
           d3={d3}
           d4={d4}
-          d5 ={d5}
-          d6 = {d6}
+          d5={d5}
+          d6={d6}
           setd1={setd1}
           setd2={setd2}
           setd3={setd3}
           setd4={setd4}
           setd5={setd5}
           setd6={setd6}
-
           number={number}
         />
       ),
