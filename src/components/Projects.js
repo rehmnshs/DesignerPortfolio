@@ -8,27 +8,37 @@ import { useNavigate } from "react-router-dom";
 export default function Projects({
   prline,
   setprline,
+  pic17Source,
+  setpic17Source,
   pic16Source,
   setpic16Source,
   pic15Source,
   setpic15Source,
   pic14Source,
   setpic14Source,
-  pic17Source,
+  setpic19Source,
+  pic18Source,
+  pic19Source,
+  setpic18Source,
   d1,
   d2,
   d3,
   d4,
+  d5,
+  d6,
   setd1,
   setd2,
   setd3,
+  setd4,
+  setd5,
+  setd6,
   number,
 }) {
   gsap.registerPlugin(ScrollTrigger);
   const [showOverlay, setShowOverlay] = useState(false);
   const navigate = useNavigate();
   function scrollToTop() {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    window.scrollTo({ top: 0, behavior: "instant" });
   }
 
   // Call the scrollToTop function when the page loads
@@ -122,9 +132,7 @@ export default function Projects({
                   Contact
                 </div>
               </div>
-              <div className="socialmedia">
-        
-              </div>
+              <div className="socialmedia"></div>
             </div>
             <div className="secondpartabout">
               <div className="disappearabout">{number}</div>
@@ -162,14 +170,25 @@ export default function Projects({
 
         <img src={pic16Source[0]} />
       </div>
-      <div className="proj3" >
+      <div className="proj3">
         <h1 className="proj1">
-          <h1 className="titled" >
-            {d4}
-          </h1>
+         {d4}
         </h1>
 
         <img src={pic17Source[0]} />
+      </div>
+      <div className="proj3">
+        <h1 className="proj1">
+          {d5}
+        </h1>
+
+        <img src={pic18Source[0]} />
+      </div>  <div className="proj3">
+        <h1 className="proj1">
+          {d6}
+        </h1>
+
+        <img src={pic18Source[0]} />
       </div>
     </>
   );

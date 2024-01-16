@@ -9,13 +9,6 @@ import pic1 from "../src/assets/pic1.jpg";
 import pic2 from "../src/assets/pic2.png";
 import pic3 from "../src/assets/pic3.jpg";
 import pic4 from "../src/assets/pic4.jpg";
-import pic5 from "../src/assets/pic5.jpg";
-import pic6 from "../src/assets/pic6.jpg";
-import pic7 from "../src/assets/pic7.jpg";
-import pic8 from "../src/assets/pic8.jpg";
-import pic9 from "../src/assets/pic9.jpg";
-import pic10 from "../src/assets/pic7.jpg";
-import pic11 from "../src/assets/pic5.jpg";
 import pic12 from "../src/assets/bg6.jpg";
 
 const Index = () => {
@@ -33,27 +26,22 @@ const Index = () => {
   const [d1, setd1] = useState("Design 1");
   const [d2, setd2] = useState("Design 2");
   const [d3, setd3] = useState("Design 3");
-  const [d4, setd4] = useState("Design 3");
-
+  const [d4, setd4] = useState("Design 4");
+  const [d5, setd5] = useState("Design 5");
+  const [d6, setd6] = useState("Design 6");
   const [email, setemail] = useState("info@selemen");
   const [number, setnumber] = useState("+128148312084");
   const [pic1Source, setpic1Source] = useState([pic1, null]);
   const [pic2Source, setpic2Source] = useState([pic2, null]);
   const [pic3Source, setpic3Source] = useState([pic3, null]);
   const [pic4Source, setpic4Source] = useState([pic4, null]);
-  const [pic5Source, setpic5Source] = useState([pic5, null]);
-  const [pic6Source, setpic6Source] = useState([pic6, null]);
-  const [pic7Source, setpic7Source] = useState([pic7, null]);
-  const [pic8Source, setpic8Source] = useState([pic8, null]);
-  const [pic9Source, setpic9Source] = useState([pic9, null]);
-  const [pic10Source, setpic10Source] = useState([pic10, null]);
-  const [pic11Source, setpic11Source] = useState([pic11, null]);
-  const [pic12Source, setpic12Source] = useState([pic8, null]);
-  const [pic13Source, setpic13Source] = useState([pic6, null]);
+
   const [pic14Source, setpic14Source] = useState([pic12, null]);
   const [pic15Source, setpic15Source] = useState([pic12, null]);
   const [pic16Source, setpic16Source] = useState([pic12, null]);
   const [pic17Source, setpic17Source] = useState([pic12, null]);
+  const [pic18Source, setpic18Source] = useState([pic12, null]);
+  const [pic19Source, setpic19Source] = useState([pic12, null]);
 
   const router = createBrowserRouter([
     {
@@ -72,29 +60,11 @@ const Index = () => {
           pic2Source={pic2Source}
           pic3Source={pic3Source}
           pic4Source={pic4Source}
-          pic5Source={pic5Source}
-          pic6Source={pic6Source}
-          pic7Source={pic7Source}
-          pic8Source={pic8Source}
-          pic9Source={pic9Source}
-          pic10Source={pic10Source}
-          pic11Source={pic11Source}
-          pic12Source={pic12Source}
-          pic13Source={pic12Source}
           setpic1Source={setpic1Source}
           setpic2Source={setpic2Source}
           setpic3Source={setpic3Source}
           setpic4Source={setpic4Source}
-          setpic5Source={setpic5Source}
-          setpic6Source={setpic6Source}
-          setpic7Source={setpic7Source}
-          setpic8Source={setpic8Source}
-          setpic9Source={setpic9Source}
-          setpic10Source={setpic10Source}
-          setpic11Source={setpic11Source}
-          setpic12Source={setpic12Source}
-          setpic13Source={setpic13Source}
-          number = {number} 
+          number={number}
         />
       ),
     },
@@ -111,23 +81,39 @@ const Index = () => {
           pic16Source={pic16Source}
           setpic16Source={setpic16Source}
           pic17Source={pic17Source}
-
+          setpic17Source={setpic17Source}
+          pic18Source={pic18Source}
+          setpic18Source ={setpic18Source}
+          pic19Source={pic19Source}
+          setpic19Source ={setpic19Source}
           d1={d1}
           d2={d2}
           d3={d3}
           d4={d4}
-
+          d5 ={d5}
+          d6 = {d6}
           setd1={setd1}
           setd2={setd2}
           setd3={setd3}
-          number = {number} 
+          setd4={setd4}
+          setd5={setd5}
+          setd6={setd6}
+
+          number={number}
         />
       ),
     },
 
     {
       path: "/contact",
-      element: <Contacts email = {email} setemail = {setemail} number = {number} setnumber= {setnumber}/>,
+      element: (
+        <Contacts
+          email={email}
+          setemail={setemail}
+          number={number}
+          setnumber={setnumber}
+        />
+      ),
     },
   ]);
 

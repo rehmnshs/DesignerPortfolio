@@ -52,7 +52,7 @@ export default function App({
   gsap.registerPlugin(ScrollTrigger);
   const navigate = useNavigate();
   function scrollToTop() {
-    window.scrollTo({ top: 0, behavior: "smooth" }); // 'smooth' for a smooth scroll, use 'auto' for instant scroll
+    window.scrollTo({ top: 0, behavior: "auto" }); // 'smooth' for a smooth scroll, use 'auto' for instant scroll
   }
   const splitTypes = document.querySelectorAll(".para");
   useEffect(() => {
@@ -82,7 +82,7 @@ export default function App({
     });
   }, []);
 
-  document.addEventListener("mousemove", (e) => {
+ /* document.addEventListener("mousemove", (e) => {
     const { clientX, clientY } = e;
     const x = clientX;
     const y = clientY;
@@ -92,7 +92,7 @@ export default function App({
       duration: 0.1,
       ease: "sine.out",
     });
-  });
+  });*/
 
   function circleColorChange(project) {
     if (showOverlay) {
@@ -201,14 +201,12 @@ export default function App({
         <div className="img1">
           <div className="innerimg1">
             <img id="img1" src={pic2Source[0]} onClick={() => {}} />
-            <div className="txtimg">ladsas</div>
           </div>{" "}
         </div>
 
         <div className="img2">
           <div className="innerimg2">
             <img id="img2" src={pic3Source[0]} />
-            <div className="txtimg">ladsas</div>
 
 
           </div>
@@ -219,7 +217,6 @@ export default function App({
       <div className="img3">
         <div className="innerimg3">
           <img  className="img3inner" src={pic4Source[0]} />
-          <div className="txtimg">ladsas</div>
 
         </div>
       </div>

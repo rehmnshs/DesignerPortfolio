@@ -330,6 +330,7 @@
 .disappearabout.refs {
   position: relative;
   transition: transform 0.3s;
+  cursor: pointer;
 }
 .disappearabout.refs:hover {
   transform: translateX(20px);
