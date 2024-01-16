@@ -5,11 +5,11 @@ import "./css/index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Projects from "./components/Projects";
 import Contacts from "./components/Contacts";
-import pic1 from "../src/assets/pic1.jpg";
+import pic1 from "../src/assets/pic1.png";
 import pic2 from "../src/assets/pic2.png";
-import pic3 from "../src/assets/pic3.jpg";
-import pic4 from "../src/assets/pic4.jpg";
-import pic12 from "../src/assets/bg6.jpg";
+import pic3 from "../src/assets/pic3.png";
+import pic4 from "../src/assets/pic4.png";
+import pic12 from "../src/assets/bg6.png";
 
 const Index = () => {
   const [prline, setprline] = useState(
