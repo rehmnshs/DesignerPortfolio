@@ -93,7 +93,7 @@ export default function App({
   function circleColorChange(project) {
     if (showOverlay) {
       gsap.to(".disappearabout", { opacity: 0, duration: 0.3 });
-      gsap.to(".socialmedia", { opacity: 0, duration: 0.0 });
+      gsap.to(".socialmedia", { opacity: 0, duration: 0.1 });
 
       var menuu = document.getElementById("overla");
 
