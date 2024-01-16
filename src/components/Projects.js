@@ -16,13 +16,22 @@ export default function Projects({
   setpic15Source,
   pic14Source,
   setpic14Source,
+  setpic19Source,
+  pic18Source,
+  pic19Source,
+  setpic18Source,
   d1,
   d2,
   d3,
   d4,
+  d5,
+  d6,
   setd1,
   setd2,
   setd3,
+  setd4,
+  setd5,
+  setd6,
   number,
 }) {
   function onchangeparap(e) {
@@ -63,7 +72,8 @@ export default function Projects({
   const [showOverlay, setShowOverlay] = useState(false);
   const navigate = useNavigate();
   function scrollToTop() {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    window.scrollTo({ top: 0, behavior: 'instant' });
+
   }
 
   // Call the scrollToTop function when the page loads
@@ -91,6 +101,7 @@ export default function Projects({
       scrollTrigger: { trigger: ".proj3", scrub: false },
       duration: 1,
     });
+
   }, []);
   function showlay1(projectj) {
     if (showOverlay) {
@@ -195,7 +206,7 @@ export default function Projects({
         <img src={pic14Source[0]} className="img11" />
       </div>
       <div className="proj2" onClick={() => addInput(setpic15Source)}>
-        <h1 className="proj1">
+        <h1 >
           <textarea className="titled" onChange={onchanged2}>
             {d2}
           </textarea>
@@ -212,7 +223,7 @@ export default function Projects({
 
         <img src={pic16Source[0]} />
       </div>
-      <div className="proj3" onClick={() => addInput(setpic17Source)}>
+      <div className="proj4" onClick={() => addInput(setpic17Source)}>
         <h1 className="proj1">
           <textarea className="titled" onChange={onchanged3}>
             {d4}
@@ -220,6 +231,24 @@ export default function Projects({
         </h1>
 
         <img src={pic17Source[0]} />
+      </div>
+      <div className="proj5" onClick={() => addInput(setpic18Source)}>
+        <h1 className="proj1">
+          <textarea className="titled" onChange={onchanged3}>
+            {d5}
+          </textarea>
+        </h1>
+
+        <img src={pic18Source[0]} />
+      </div>
+      <div className="proj6" onClick={() => addInput(setpic19Source)}>
+        <h1 className="proj1">
+          <textarea className="titled" onChange={onchanged3}>
+            {d6}
+          </textarea>
+        </h1>
+
+        <img src={pic19Source[0]} />
       </div>
     </>
   );

@@ -118,6 +118,90 @@ position: absolute;
 
   opacity: 0.5;
 }
+.proj4 > img {
+  z-index: 0;
+  max-height: 110vh;
+  width: 100vw;
+  filter: invert(0%) brightness(70%);
+}
+.proj4 > h1 {
+position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 11;
+  text-transform: uppercase;
+}
+.proj4 > p {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 11;
+
+  opacity: 0.5;
+}
+.proj5 > img {
+  z-index: 0;
+  max-height: 110vh;
+  width: 100vw;
+  filter: invert(0%) brightness(70%);
+}
+.proj5 > h1 {
+position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 11;
+  text-transform: uppercase;
+}
+.proj5 > p {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 11;
+
+  opacity: 0.5;
+}
+.proj6 > img {
+  z-index: 0;
+  max-height: 110vh;
+  width: 100vw;
+  filter: invert(0%) brightness(70%);
+}
+.proj6 > h1 {
+position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 11;
+  text-transform: uppercase;
+}
+.proj6 > p {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 11;
+
+  opacity: 0.5;
+}
 .titleproject {
   position: absolute;
 }

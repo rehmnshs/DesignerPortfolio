@@ -15,15 +15,7 @@ export default function App({
   setpic2Source,
   setpic3Source,
   setpic4Source,
-  setpic5Source,
-  setpic6Source,
-  setpic7Source,
-  setpic8Source,
-  setpic9Source,
-  setpic10Source,
-  setpic11Source,
-  setpic12Source,
-  setpic13Source,
+ 
   title,
   setTitle,
   para,
@@ -36,15 +28,7 @@ export default function App({
   pic2Source,
   pic3Source,
   pic4Source,
-  pic5Source,
-  pic6Source,
-  pic7Source,
-  pic8Source,
-  pic9Source,
-  pic10Source,
-  pic11Source,
-  pic12Source,
-  pic13Source,
+ 
 }) {
   const [user, setuser] = useState();
   const [showOverlay, setShowOverlay] = useState(false);
@@ -109,7 +93,7 @@ export default function App({
   function circleColorChange(project) {
     if (showOverlay) {
       gsap.to(".disappearabout", { opacity: 0, duration: 0.3 });
-      gsap.to(".socialmedia", { opacity: 0, duration: 0.00 });
+      gsap.to(".socialmedia", { opacity: 0, duration: 0.0 });
 
       var menuu = document.getElementById("overla");
 
@@ -263,6 +247,8 @@ export default function App({
               }}
             />
           </div>
+          <textarea >wadawd</textarea>
+
         </div>
       </div>
       <div></div>
@@ -275,79 +261,18 @@ export default function App({
             }}
           />
         </div>
+
       </div>
-      <div className="designs">
-        <div className="dtitle">
-          {" "}
-          <h1>Wide range of designs</h1>
-          <p>We will help you implement a project of any complexity</p>
-          <div className="imgsamplec"></div>
-        </div>
-      </div>
+
       <div className="designImgs">
-        <div className="leftlast">
-          <img
-            className="imgsample8"
-            src={pic5Source[0]}
-            onClick={() => addInput(setpic5Source)}
-          />
-        </div>
-        <div className="leftdwnlast">
-          <img
-            className="imgsample8"
-            src={pic8Source[0]}
-            onClick={() => addInput(setpic8Source)}
-          />
-        </div>
-        <div className="leftone">
-          <img
-            className="imgsample8"
-            src={pic10Source[0]}
-            onClick={() => addInput(setpic10Source)}
-          />
-        </div>
-        <div className="leftdwnone">
-          <img
-            className="imgsample8"
-            src={pic7Source[0]}
-            onClick={() => addInput(setpic7Source)}
-          />
-        </div>
-        <div className="middleimg1">
-          <img
-            className="imgsample8"
-            src={pic6Source[0]}
-            onClick={() => addInput(setpic6Source)}
-          />
-        </div>
-        <div className="rightone">
-          <img
-            className="imgsample8"
-            src={pic9Source[0]}
-            onClick={() => addInput(setpic9Source)}
-          />
-        </div>
-        <div className="rightdwnone">
-          <img
-            className="imgsample8"
-            src={pic13Source[0]}
-            onClick={() => addInput(setpic13Source)}
-          />
-        </div>
-        <div className="rightlast">
-          <img
-            className="imgsample8"
-            src={pic11Source[0]}
-            onClick={() => addInput(setpic11Source)}
-          />
-        </div>
-        <div className="rightdwnlast">
-          <img
-            className="imgsample8"
-            src={pic12Source[0]}
-            onClick={() => addInput(setpic12Source)}
-          />
-        </div>
+        <h1
+          className="visproj "
+          onClick={() => {
+            navigate("/projects");
+          }}
+        >
+          Visit Our Projects
+        </h1>
       </div>
     </>
   );
