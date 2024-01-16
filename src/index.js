@@ -5,16 +5,21 @@ import "./css/index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Projects from "./components/Projects";
 import Contacts from "./components/Contacts";
-import pic1 from "../src/assets/pic1.jpg";
+import pic1 from "../src/assets/pic1.png";
 import pic2 from "../src/assets/pic2.png";
-import pic3 from "../src/assets/pic3.jpg";
-import pic4 from "../src/assets/pic4.jpg";
-import pic12 from "../src/assets/bg6.jpg";
+import pic3 from "../src/assets/pic3.png";
+import pic4 from "../src/assets/pic4.png";
+import pic5 from "../src/assets/pic5.png";
+import pic6 from "../src/assets/pic6.png";
+import pic7 from "../src/assets/pic7.png";
+import pic8 from "../src/assets/pic8.png";
+import pic9 from "../src/assets/bg6.png";
+import pic10 from "../src/assets/bg6.png";
 
 const Index = () => {
 
 
-  // CONTENTS
+  //Content
   const [prline, setprline] = useState(
     "We will help you implement a project of any complexity"
   );
@@ -39,34 +44,31 @@ const Index = () => {
   const [pic3Source, setpic3Source] = useState([pic3, null]);
   const [pic4Source, setpic4Source] = useState([pic4, null]);
 
-  const [pic14Source, setpic14Source] = useState([pic12, null]);
-  const [pic15Source, setpic15Source] = useState([pic12, null]);
-  const [pic16Source, setpic16Source] = useState([pic12, null]);
-  const [pic17Source, setpic17Source] = useState([pic12, null]);
-  const [pic18Source, setpic18Source] = useState([pic12, null]);
-  const [pic19Source, setpic19Source] = useState([pic12, null]);
-//CONTENTS
+  const [pic5Source, setpic5Source] = useState([pic9, null]);
+  const [pic6Source, setpic6Source] = useState([pic9, null]);
+  const [pic7Source, setpic7Source] = useState([pic9, null]);
+  const [pic8Source, setpic8Source] = useState([pic9, null]);
+  const [pic9Source, setpic9Source] = useState([pic9, null]);
+  const [pic10Source, setpic10Source] = useState([pic9, null]);
+//Content
   const router = createBrowserRouter([
     {
       path: "/",
       element: (
         <App
           para={para}
-          setpara={setpara}
+          
           title={title}
-          setTitle={setTitle}
+          
           exp={exp}
-          setexp={setexp}
+         
           rightexp={rightexp}
-          setrightexp={setrightexp}
+          
           pic1Source={pic1Source}
           pic2Source={pic2Source}
           pic3Source={pic3Source}
           pic4Source={pic4Source}
-          setpic1Source={setpic1Source}
-          setpic2Source={setpic2Source}
-          setpic3Source={setpic3Source}
-          setpic4Source={setpic4Source}
+         
           number={number}
         />
       ),
@@ -76,31 +78,20 @@ const Index = () => {
       element: (
         <Projects
           prline={prline}
-          setprline={setprline}
-          pic14Source={pic14Source}
-          setpic14Source={setpic14Source}
-          pic15Source={pic15Source}
-          setpic15Source={setpic15Source}
-          pic16Source={pic16Source}
-          setpic16Source={setpic16Source}
-          pic17Source={pic17Source}
-          setpic17Source={setpic17Source}
-          pic18Source={pic18Source}
-          setpic18Source={setpic18Source}
-          pic19Source={pic19Source}
-          setpic19Source={setpic19Source}
+         
+          pic5Source={pic5Source}
+          
+          pic6Source={pic6Source}
+          pic7Source={pic7Source}
+          pic8Source={pic8Source}
+          pic9Source={pic9Source}
+          pic10Source={pic10Source}
           d1={d1}
           d2={d2}
           d3={d3}
           d4={d4}
           d5={d5}
           d6={d6}
-          setd1={setd1}
-          setd2={setd2}
-          setd3={setd3}
-          setd4={setd4}
-          setd5={setd5}
-          setd6={setd6}
           number={number}
         />
       ),
@@ -111,9 +102,7 @@ const Index = () => {
       element: (
         <Contacts
           email={email}
-          setemail={setemail}
           number={number}
-          setnumber={setnumber}
         />
       ),
     },

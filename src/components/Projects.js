@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import "../css/project.css";
-import img1 from "../assets/bg6.jpg";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useNavigate } from "react-router-dom";
@@ -8,18 +7,19 @@ import { useNavigate } from "react-router-dom";
 export default function Projects({
   prline,
   setprline,
-  pic17Source,
-  setpic17Source,
-  pic16Source,
-  setpic16Source,
-  pic15Source,
-  setpic15Source,
-  pic14Source,
-  setpic14Source,
+  pic10Source,
+  pic8Source,
+  setpic8Source,
+  pic7Source,
+  setpic7Source,
+  pic6Source,
+  setpic6Source,
+  pic5Source,
+  setpic5Source,
   setpic19Source,
-  pic18Source,
+  pic9Source,
   pic19Source,
-  setpic18Source,
+  setpic9Source,
   d1,
   d2,
   d3,
@@ -158,37 +158,37 @@ export default function Projects({
       </div>
       <div className="proj1">
         <h1 className="proj1">{d1}</h1>
-        <img src={pic14Source[0]} className="img11" />
+        <img src={pic5Source[0]} className="img11" />
       </div>
       <div className="proj2">
         <h1 className="proj1">{d2}</h1>
 
-        <img src={pic15Source[0]} />
+        <img src={pic6Source[0]} />
       </div>
       <div className="proj3">
         <h1 className="proj1">{d3}</h1>
 
-        <img src={pic16Source[0]} />
+        <img src={pic7Source[0]} />
       </div>
       <div className="proj3">
         <h1 className="proj1">
          {d4}
         </h1>
 
-        <img src={pic17Source[0]} />
+        <img src={pic8Source[0]} />
       </div>
       <div className="proj3">
         <h1 className="proj1">
           {d5}
         </h1>
 
-        <img src={pic18Source[0]} />
+        <img src={pic9Source[0]} />
       </div>  <div className="proj3">
         <h1 className="proj1">
           {d6}
         </h1>
 
-        <img src={pic18Source[0]} />
+        <img src={pic10Source[0]} />
       </div>
     </>
   );
